@@ -10,6 +10,7 @@ struct DashboardView: View {
             LazyVGrid(columns: columns, spacing: 16) {
                 VaultHealthCard(summary: appState.lastAuditSummary)
                 SyncStatusCard()
+                BackupStatusCard()
 
                 ForEach(appState.agents) { agent in
                     AgentCard(

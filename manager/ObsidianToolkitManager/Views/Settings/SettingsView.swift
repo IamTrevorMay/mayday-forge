@@ -18,6 +18,9 @@ struct SettingsView: View {
     @State private var updateState: UpdateState = .idle
     @State private var updateOutput: [String] = []
     @State private var showBuildOutput: Bool = false
+    @State private var backupScheduleInstalled: Bool = false
+    @State private var backupScheduleStatus: String?
+    @State private var showBackupLogs: Bool = false
 
     enum UpdateState: Equatable {
         case idle
@@ -33,6 +36,7 @@ struct SettingsView: View {
             excludedFoldersSection
             apiSection
             taskSyncSection
+            backupSection
             appUpdateSection
             saveSection
         }
@@ -241,6 +245,124 @@ struct SettingsView: View {
         case .starting: return "Starting..."
         case .running: return "Running"
         case .error: return "Error"
+        }
+    }
+
+    // MARK: - Supabase Backup
+
+    private var backupSection: some View {
+        Section("Supabase Backup") {
+            if let path = appState.config?.backupVaultPath, !path.isEmpty {
+                LabeledContent("Backup Vault") {
+                    Text(path)
+                        .foregroundStyle(.secondary)
+                        .textSelection(.enabled)
+                        .lineLimit(1)
+                        .truncationMode(.middle)
+                }
+            }
+
+            HStack {
+                let tokenEnv = appState.config?.supabaseAccessTokenEnv ?? "SUPABASE_ACCESS_TOKEN"
+                let hasToken = appState.shellEnvironment[tokenEnv] != nil
+                Image(systemName: hasToken ? "checkmark.circle.fill" : "xmark.circle.fill")
+                    .foregroundStyle(hasToken ? .green : .red)
+                Text(hasToken ? "Supabase token configured ($\(tokenEnv))" : "Set $\(tokenEnv) in your shell environment")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            HStack {
+                Image(systemName: backupScheduleInstalled ? "clock.badge.checkmark.fill" : "clock")
+                    .foregroundStyle(backupScheduleInstalled ? .green : .secondary)
+                Text(backupScheduleInstalled ? "Scheduled: Sundays 11 PM" : "Not scheduled")
+                    .font(.headline)
+
+                Spacer()
+
+                if backupScheduleInstalled {
+                    Button("Uninstall") {
+                        do {
+                            try BackupSchedulerService.uninstallSchedule()
+                            backupScheduleInstalled = false
+                            backupScheduleStatus = "Schedule removed"
+                        } catch {
+                            backupScheduleStatus = "Error: \(error.localizedDescription)"
+                        }
+                    }
+                    .buttonStyle(.bordered)
+                    .controlSize(.small)
+                } else {
+                    Button("Install Schedule") {
+                        do {
+                            try BackupSchedulerService.installSchedule(
+                                pythonPath: appState.pythonPath,
+                                toolkitPath: appState.toolkitPath,
+                                environment: appState.effectiveEnvironment
+                            )
+                            backupScheduleInstalled = true
+                            backupScheduleStatus = "Schedule installed"
+                        } catch {
+                            backupScheduleStatus = "Error: \(error.localizedDescription)"
+                        }
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.small)
+                }
+            }
+
+            if let status = backupScheduleStatus {
+                Text(status)
+                    .font(.caption)
+                    .foregroundStyle(status.contains("Error") ? .red : .green)
+            }
+
+            HStack {
+                Button("Run Backup Now") {
+                    appState.backupScheduler.runBackup(
+                        pythonPath: appState.pythonPath,
+                        toolkitPath: appState.toolkitPath,
+                        environment: appState.effectiveEnvironment
+                    )
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.small)
+                .disabled(appState.backupScheduler.status == .running)
+
+                if appState.backupScheduler.status == .running {
+                    ProgressView()
+                        .controlSize(.small)
+                    Text("Running...")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                if appState.backupScheduler.status == .success {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(.green)
+                    Text("Complete")
+                        .font(.caption)
+                }
+            }
+
+            if let error = appState.backupScheduler.lastError {
+                Text(error)
+                    .font(.caption)
+                    .foregroundStyle(.red)
+            }
+
+            DisclosureGroup("Logs (\(appState.backupScheduler.recentOutput.count) lines)", isExpanded: $showBackupLogs) {
+                ScrollView {
+                    Text(appState.backupScheduler.recentOutput.joined(separator: "\n"))
+                        .font(.system(.caption, design: .monospaced))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .textSelection(.enabled)
+                }
+                .frame(maxHeight: 200)
+            }
+        }
+        .onAppear {
+            backupScheduleInstalled = BackupSchedulerService.isScheduleInstalled()
         }
     }
 

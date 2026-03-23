@@ -554,6 +554,45 @@
           "args": ["sync-all"]
         }
       ]
+    },
+    {
+      "id": "supabase_backup",
+      "name": "Supabase Backup",
+      "description": "Back up all Supabase projects (schema + data) as JSON files to the Mayday Databases vault. Supports incremental backups for large tables.",
+      "module": "agents.supabase_backup",
+      "icon": "arrow.down.doc.fill",
+      "parameters": [
+        {
+          "name": "projects",
+          "flag": "--projects",
+          "type": "string_array",
+          "required": false,
+          "default": null,
+          "description": "Filter to specific project names or IDs (backs up all if omitted)"
+        },
+        {
+          "name": "dry_run",
+          "flag": "--dry-run",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "description": "Preview without writing files"
+        }
+      ],
+      "examples": [
+        {
+          "description": "Back up all projects",
+          "args": []
+        },
+        {
+          "description": "Back up a single project",
+          "args": ["--projects", "home-dashboard-energy"]
+        },
+        {
+          "description": "Dry run to preview",
+          "args": ["--dry-run"]
+        }
+      ]
     }
   ]
 }

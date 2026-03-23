@@ -11,6 +11,7 @@ final class AppState {
     var selectedAgentId: String?
     var shellEnvironment: [String: String] = ShellEnvironment.capture()
     let syncDaemon = SyncDaemonService()
+    let backupScheduler = BackupSchedulerService()
 
     var repoPath: String {
         get { UserDefaults.standard.string(forKey: "repoPath") ?? "" }
