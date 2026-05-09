@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02450F29CA0546A2FF43DE76 /* RenameFileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE54D12209CF1068E75A078 /* RenameFileAction.swift */; };
+		160683B0D510CA3247D3C56F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B384101E104CC267BF4451D /* Assets.xcassets */; };
+		4D98DDE3915A9B45E8AA737E /* MaydayForgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4C1E9DEC2124E18FB2D37 /* MaydayForgeApp.swift */; };
+		593970AE77FE8721F130243A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F346D6EE292E11C0889806 /* ContentView.swift */; };
+		5BD46105EADBDC29EA3A69EA /* GenerateChangelogAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735A6F8EAA08971689678ED /* GenerateChangelogAction.swift */; };
+		5C3289F9833C1E794827AED2 /* CopyFileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A76504CFA8C55DFFC8F119A /* CopyFileAction.swift */; };
+		5C94B51EE050732E7C3642DC /* WorkflowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F87551AA411E89B39AB7C8 /* WorkflowListView.swift */; };
+		62EFA1D94775A94771E1201C /* WorkflowStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D0503970E4D07B86FB0225 /* WorkflowStore.swift */; };
+		69FE71F5B40F2B00F806728A /* MoveFileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F6F786892C7881E0561468 /* MoveFileAction.swift */; };
+		6EBA4C0CBC956BF00CF47AFD /* FilterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C55F541EF054A216D12C2 /* FilterAction.swift */; };
+		71510C9DEC1984BA938B6481 /* ForgeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731A9200113B048CE28C205 /* ForgeEngine.swift */; };
+		75117357619168F4A5D70470 /* GitPushWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BBBBED2EAC8021C245B912 /* GitPushWatcher.swift */; };
+		96C7BA9BACE48090CE9F2233 /* ActionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CD68CB30F2CEB45A965CCD /* ActionRegistry.swift */; };
+		992DBC19C297DB0008CD2092 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A4A5F6C59A105A9B01D6C /* SettingsView.swift */; };
+		A360D3BEBF66D6E352779B80 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE0598413A39B62C7796613 /* DashboardView.swift */; };
+		A8A6284579D16B7F85E7DC7A /* AppendToFileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1902FB9F7A006CE1EA219E44 /* AppendToFileAction.swift */; };
+		AE954D52261107C98D0B36CD /* SystemNotificationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BF6141839B2BBC28F6CAC /* SystemNotificationAction.swift */; };
+		B0898C495E42B51BF1BA38A5 /* ProcessRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C367ADC69A83C2692F57AF /* ProcessRunner.swift */; };
+		B717FCE10D0636B71184C0DA /* Workflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA37DE1536C9425B5F70234 /* Workflow.swift */; };
+		B76A45546E8BA0BA04EB529A /* FolderWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E58253FA06A767C9FB74006 /* FolderWatcher.swift */; };
+		CA92D1CF5805DFD5E7DC7437 /* ForgeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FCD5EB8CDF528B193E53C0 /* ForgeAction.swift */; };
+		CBE72133125361FC5B8B24FE /* WorkflowEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A0D9EE0B1F9547D78A280 /* WorkflowEditorView.swift */; };
+		DE2DFE607FC07A51BE2C64B5 /* VariableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35D4493953C1ADDE89AC74 /* VariableHelper.swift */; };
+		E1D492668F4A9BFFDE8C5444 /* TagObsidianNoteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E04A4A2BCCC354F6890B08 /* TagObsidianNoteAction.swift */; };
+		E543779E12EB2AE466D0994D /* RunLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E070BD6F438EB055C3F32E2 /* RunLogView.swift */; };
+		EB4980E5DA7074AD2D1DBC74 /* GitAutoCommitAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADA70BDF3BE93EC9ACF07F /* GitAutoCommitAction.swift */; };
+		EC7F7FFAA26016B9692C4426 /* CreateObsidianNoteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC3E85FD1D4B8B4A9C6B1F /* CreateObsidianNoteAction.swift */; };
+		F1492A537D767AC7F08E3CA5 /* ScheduleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770B4F8722AAF0B6DF5995C /* ScheduleTimer.swift */; };
+		FDD5C3DECC868F415E72BCFD /* RunShellCommandAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C2AA05E17173F820BF87AF /* RunShellCommandAction.swift */; };
+		FE94B462A469ABF2D145AB02 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B05DBE68B7603606EC692 /* AppState.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07E04A4A2BCCC354F6890B08 /* TagObsidianNoteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagObsidianNoteAction.swift; sourceTree = "<group>"; };
+		17FCD5EB8CDF528B193E53C0 /* ForgeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgeAction.swift; sourceTree = "<group>"; };
+		1902FB9F7A006CE1EA219E44 /* AppendToFileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendToFileAction.swift; sourceTree = "<group>"; };
+		1B384101E104CC267BF4451D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23BBBBED2EAC8021C245B912 /* GitPushWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitPushWatcher.swift; sourceTree = "<group>"; };
+		2770B4F8722AAF0B6DF5995C /* ScheduleTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTimer.swift; sourceTree = "<group>"; };
+		2EE4C1E9DEC2124E18FB2D37 /* MaydayForgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaydayForgeApp.swift; sourceTree = "<group>"; };
+		319B05DBE68B7603606EC692 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3731A9200113B048CE28C205 /* ForgeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgeEngine.swift; sourceTree = "<group>"; };
+		374BF6141839B2BBC28F6CAC /* SystemNotificationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemNotificationAction.swift; sourceTree = "<group>"; };
+		40C2AA05E17173F820BF87AF /* RunShellCommandAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunShellCommandAction.swift; sourceTree = "<group>"; };
+		4F35D4493953C1ADDE89AC74 /* VariableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableHelper.swift; sourceTree = "<group>"; };
+		50C367ADC69A83C2692F57AF /* ProcessRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessRunner.swift; sourceTree = "<group>"; };
+		56F87551AA411E89B39AB7C8 /* WorkflowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowListView.swift; sourceTree = "<group>"; };
+		58D0503970E4D07B86FB0225 /* WorkflowStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowStore.swift; sourceTree = "<group>"; };
+		5D1C55F541EF054A216D12C2 /* FilterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAction.swift; sourceTree = "<group>"; };
+		5EA37DE1536C9425B5F70234 /* Workflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workflow.swift; sourceTree = "<group>"; };
+		693493DC30C031D2C8F840B6 /* MaydayForge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaydayForge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A76504CFA8C55DFFC8F119A /* CopyFileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyFileAction.swift; sourceTree = "<group>"; };
+		6E070BD6F438EB055C3F32E2 /* RunLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogView.swift; sourceTree = "<group>"; };
+		7F7A0D9EE0B1F9547D78A280 /* WorkflowEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowEditorView.swift; sourceTree = "<group>"; };
+		81F6F786892C7881E0561468 /* MoveFileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveFileAction.swift; sourceTree = "<group>"; };
+		8549FD1DCDB8A887F3172E91 /* MaydayForge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MaydayForge.entitlements; sourceTree = "<group>"; };
+		857A4A5F6C59A105A9B01D6C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		85F346D6EE292E11C0889806 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8BEC3E85FD1D4B8B4A9C6B1F /* CreateObsidianNoteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateObsidianNoteAction.swift; sourceTree = "<group>"; };
+		9E58253FA06A767C9FB74006 /* FolderWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderWatcher.swift; sourceTree = "<group>"; };
+		B735A6F8EAA08971689678ED /* GenerateChangelogAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateChangelogAction.swift; sourceTree = "<group>"; };
+		DAADA70BDF3BE93EC9ACF07F /* GitAutoCommitAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAutoCommitAction.swift; sourceTree = "<group>"; };
+		F9CD68CB30F2CEB45A965CCD /* ActionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRegistry.swift; sourceTree = "<group>"; };
+		FCE0598413A39B62C7796613 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		FFE54D12209CF1068E75A078 /* RenameFileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameFileAction.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		04CBC9F01981B6F4B702D756 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F9E6A9936080D7C1A59EE7A /* Dashboard */,
+				A65063D82A57912E4F1AB24E /* RunLog */,
+				A0B79E094E66BC6783D7D051 /* Settings */,
+				668F81ADD81BEB2996D82BAF /* Workflows */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0FA528AEDCA59743EE895A8D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				319B05DBE68B7603606EC692 /* AppState.swift */,
+				5EA37DE1536C9425B5F70234 /* Workflow.swift */,
+				58D0503970E4D07B86FB0225 /* WorkflowStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E190DB21295F0DC1D9EC784 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				F9CD68CB30F2CEB45A965CCD /* ActionRegistry.swift */,
+				9E58253FA06A767C9FB74006 /* FolderWatcher.swift */,
+				17FCD5EB8CDF528B193E53C0 /* ForgeAction.swift */,
+				3731A9200113B048CE28C205 /* ForgeEngine.swift */,
+				23BBBBED2EAC8021C245B912 /* GitPushWatcher.swift */,
+				2770B4F8722AAF0B6DF5995C /* ScheduleTimer.swift */,
+				4F35D4493953C1ADDE89AC74 /* VariableHelper.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		30EA4A4E32FCC1304AAFCBB1 /* MaydayForge */ = {
+			isa = PBXGroup;
+			children = (
+				8549FD1DCDB8A887F3172E91 /* MaydayForge.entitlements */,
+				E7EEBAC7AF7655FB86552F9D /* Actions */,
+				A010A78DA20AB65E5B092A90 /* App */,
+				2E190DB21295F0DC1D9EC784 /* Engine */,
+				0FA528AEDCA59743EE895A8D /* Models */,
+				312DA5F481EA375E2AE2C770 /* Resources */,
+				5B27BD751EC4D5781AFC9EDD /* Utilities */,
+				04CBC9F01981B6F4B702D756 /* Views */,
+			);
+			path = MaydayForge;
+			sourceTree = "<group>";
+		};
+		312DA5F481EA375E2AE2C770 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B384101E104CC267BF4451D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3F9E6A9936080D7C1A59EE7A /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				FCE0598413A39B62C7796613 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		5B27BD751EC4D5781AFC9EDD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				50C367ADC69A83C2692F57AF /* ProcessRunner.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		62C3219D741A505029205038 = {
+			isa = PBXGroup;
+			children = (
+				30EA4A4E32FCC1304AAFCBB1 /* MaydayForge */,
+				8B5D9CEAF70AF2F5DAC1076F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		668F81ADD81BEB2996D82BAF /* Workflows */ = {
+			isa = PBXGroup;
+			children = (
+				7F7A0D9EE0B1F9547D78A280 /* WorkflowEditorView.swift */,
+				56F87551AA411E89B39AB7C8 /* WorkflowListView.swift */,
+			);
+			path = Workflows;
+			sourceTree = "<group>";
+		};
+		8B5D9CEAF70AF2F5DAC1076F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				693493DC30C031D2C8F840B6 /* MaydayForge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A010A78DA20AB65E5B092A90 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				85F346D6EE292E11C0889806 /* ContentView.swift */,
+				2EE4C1E9DEC2124E18FB2D37 /* MaydayForgeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A0B79E094E66BC6783D7D051 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				857A4A5F6C59A105A9B01D6C /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A65063D82A57912E4F1AB24E /* RunLog */ = {
+			isa = PBXGroup;
+			children = (
+				6E070BD6F438EB055C3F32E2 /* RunLogView.swift */,
+			);
+			path = RunLog;
+			sourceTree = "<group>";
+		};
+		E7EEBAC7AF7655FB86552F9D /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				1902FB9F7A006CE1EA219E44 /* AppendToFileAction.swift */,
+				6A76504CFA8C55DFFC8F119A /* CopyFileAction.swift */,
+				8BEC3E85FD1D4B8B4A9C6B1F /* CreateObsidianNoteAction.swift */,
+				5D1C55F541EF054A216D12C2 /* FilterAction.swift */,
+				B735A6F8EAA08971689678ED /* GenerateChangelogAction.swift */,
+				DAADA70BDF3BE93EC9ACF07F /* GitAutoCommitAction.swift */,
+				81F6F786892C7881E0561468 /* MoveFileAction.swift */,
+				FFE54D12209CF1068E75A078 /* RenameFileAction.swift */,
+				40C2AA05E17173F820BF87AF /* RunShellCommandAction.swift */,
+				374BF6141839B2BBC28F6CAC /* SystemNotificationAction.swift */,
+				07E04A4A2BCCC354F6890B08 /* TagObsidianNoteAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6636F9EFE7B2AF912AE4F247 /* MaydayForge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E03D8D0D6643AEAA4F9E3F0 /* Build configuration list for PBXNativeTarget "MaydayForge" */;
+			buildPhases = (
+				EBA705FCAA60686D444EA333 /* Sources */,
+				A72C97CBFDF9828271D282A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaydayForge;
+			packageProductDependencies = (
+			);
+			productName = MaydayForge;
+			productReference = 693493DC30C031D2C8F840B6 /* MaydayForge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3477588635A8E7D7E76C0BB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 9E40C5E54C7784CF057CC51A /* Build configuration list for PBXProject "MaydayForge" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 62C3219D741A505029205038;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8B5D9CEAF70AF2F5DAC1076F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6636F9EFE7B2AF912AE4F247 /* MaydayForge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A72C97CBFDF9828271D282A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				160683B0D510CA3247D3C56F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBA705FCAA60686D444EA333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96C7BA9BACE48090CE9F2233 /* ActionRegistry.swift in Sources */,
+				FE94B462A469ABF2D145AB02 /* AppState.swift in Sources */,
+				A8A6284579D16B7F85E7DC7A /* AppendToFileAction.swift in Sources */,
+				593970AE77FE8721F130243A /* ContentView.swift in Sources */,
+				5C3289F9833C1E794827AED2 /* CopyFileAction.swift in Sources */,
+				EC7F7FFAA26016B9692C4426 /* CreateObsidianNoteAction.swift in Sources */,
+				A360D3BEBF66D6E352779B80 /* DashboardView.swift in Sources */,
+				6EBA4C0CBC956BF00CF47AFD /* FilterAction.swift in Sources */,
+				B76A45546E8BA0BA04EB529A /* FolderWatcher.swift in Sources */,
+				CA92D1CF5805DFD5E7DC7437 /* ForgeAction.swift in Sources */,
+				71510C9DEC1984BA938B6481 /* ForgeEngine.swift in Sources */,
+				5BD46105EADBDC29EA3A69EA /* GenerateChangelogAction.swift in Sources */,
+				EB4980E5DA7074AD2D1DBC74 /* GitAutoCommitAction.swift in Sources */,
+				75117357619168F4A5D70470 /* GitPushWatcher.swift in Sources */,
+				4D98DDE3915A9B45E8AA737E /* MaydayForgeApp.swift in Sources */,
+				69FE71F5B40F2B00F806728A /* MoveFileAction.swift in Sources */,
+				B0898C495E42B51BF1BA38A5 /* ProcessRunner.swift in Sources */,
+				02450F29CA0546A2FF43DE76 /* RenameFileAction.swift in Sources */,
+				E543779E12EB2AE466D0994D /* RunLogView.swift in Sources */,
+				FDD5C3DECC868F415E72BCFD /* RunShellCommandAction.swift in Sources */,
+				F1492A537D767AC7F08E3CA5 /* ScheduleTimer.swift in Sources */,
+				992DBC19C297DB0008CD2092 /* SettingsView.swift in Sources */,
+				AE954D52261107C98D0B36CD /* SystemNotificationAction.swift in Sources */,
+				E1D492668F4A9BFFDE8C5444 /* TagObsidianNoteAction.swift in Sources */,
+				DE2DFE607FC07A51BE2C64B5 /* VariableHelper.swift in Sources */,
+				B717FCE10D0636B71184C0DA /* Workflow.swift in Sources */,
+				CBE72133125361FC5B8B24FE /* WorkflowEditorView.swift in Sources */,
+				5C94B51EE050732E7C3642DC /* WorkflowListView.swift in Sources */,
+				62EFA1D94775A94771E1201C /* WorkflowStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		36DF07A3D8D5C14B029FEB6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+		4F66A7849562213621ED2AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		C4AA4AA3C1B0B8D3357864CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = MaydayForge/MaydayForge.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevor.MaydayForge;
+				PRODUCT_NAME = "Mayday Forge";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E813BA624ACFA5253B3E575B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = MaydayForge/MaydayForge.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevor.MaydayForge;
+				PRODUCT_NAME = "Mayday Forge";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E03D8D0D6643AEAA4F9E3F0 /* Build configuration list for PBXNativeTarget "MaydayForge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E813BA624ACFA5253B3E575B /* Debug */,
+				C4AA4AA3C1B0B8D3357864CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9E40C5E54C7784CF057CC51A /* Build configuration list for PBXProject "MaydayForge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F66A7849562213621ED2AC8 /* Debug */,
+				36DF07A3D8D5C14B029FEB6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3477588635A8E7D7E76C0BB7 /* Project object */;
+}

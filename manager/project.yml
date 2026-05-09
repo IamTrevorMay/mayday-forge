@@ -1,4 +1,4 @@
-name: ObsidianToolkitManager
+name: MaydayForge
 options:
   bundleIdPrefix: com.trevor
   deploymentTarget:
@@ -12,23 +12,20 @@ settings:
     MACOSX_DEPLOYMENT_TARGET: "14.0"
 
 targets:
-  ObsidianToolkitManager:
+  MaydayForge:
     type: application
     platform: macOS
     sources:
-      - path: ObsidianToolkitManager
+      - path: MaydayForge
     resources:
-      - path: ObsidianToolkitManager/Resources/Assets.xcassets
-      - path: ObsidianToolkitManager/Resources/report_template.html
+      - path: MaydayForge/Resources/Assets.xcassets
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
-        PRODUCT_BUNDLE_IDENTIFIER: com.trevor.ObsidianToolkitManager
-        PRODUCT_NAME: "Obsidian Toolkit Manager"
+        PRODUCT_BUNDLE_IDENTIFIER: com.trevor.MaydayForge
+        PRODUCT_NAME: "Mayday Forge"
         INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.developer-tools"
-        CODE_SIGN_ENTITLEMENTS: ObsidianToolkitManager/ObsidianToolkitManager.entitlements
+        CODE_SIGN_ENTITLEMENTS: MaydayForge/MaydayForge.entitlements
         ENABLE_APP_SANDBOX: NO
         CODE_SIGN_IDENTITY: "-"
         CODE_SIGNING_REQUIRED: NO
-    entitlements:
-      path: ObsidianToolkitManager/ObsidianToolkitManager.entitlements
